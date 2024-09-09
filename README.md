@@ -489,3 +489,84 @@ Establishes a WebSocket connection and processes commands for user authenticatio
   "content": "New message content"
 }
 ```
+
+### Command: `get_guild_channels`
+
+**Payload:**
+```json
+{
+  "command": "get_guild_channels",
+  "payload": {
+    "guild_id": 1
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "channels": [
+    {
+      "id": 1,
+      "name": "general",
+      "guild_id": 1
+    },
+    {
+      "id": 2,
+      "name": "random",
+      "guild_id": 1
+    },
+    {
+      "id": 3,
+      "name": "announcements",
+      "guild_id": 1
+    }
+  ]
+}
+```
+
+### Command: `create_channel`
+
+**Payload:**
+```json
+{
+  "command": "create_channel",
+  "payload": {
+    "guild_id": 1,
+    "name": "new-channel-name"
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "channel": {
+    "id": 1,
+    "name": "new-channel-name",
+    "guild_id": 1
+  }
+}
+```
+
+### Command: `delete_channel`
+
+**Payload:**
+```json
+{
+  "command": "delete_channel",
+  "payload": {
+    "channel_id": 1
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "detail": "Channel new-channel-name deleted successfully"
+}
+```
