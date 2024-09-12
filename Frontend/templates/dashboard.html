@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone - Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="servers-sidebar">
+            <div class="server-icon home-icon" id="home-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <!-- Server icons will be dynamically added here -->
+            <div class="server-icon create-guild-btn" id="create-guild-btn">+</div>
+        </div>
+        <div class="channels-container">
+            <div class="server-header" id="server-header">Home</div>
+            <div class="channel-list" id="channel-or-user-list">
+                <!-- Users or Channels will be dynamically added here -->
+            </div>
+            <div class="user-area">
+                <img class="user-avatar" src="/static/images/default_avatar.png" alt="User Avatar">
+                <div class="user-info">
+                    <div class="user-name">Username</div>
+                    <div class="user-tag">#0000</div>
+                </div>
+                <select id="status-select" class="status-select">
+                    <option value="online">Online</option>
+                    <option value="idle">Idle</option>
+                    <option value="dnd">Do Not Disturb</option>
+                    <option value="invisible">Offline</option>
+                </select>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="home-page" class="home-page">
+                <h2>Friends</h2>
+                <div class="friends-list">
+                    <!-- Friends will be dynamically added here -->
+                </div>
+                <div class="add-friend-section">
+                    <input type="text" id="friend-username" placeholder="Enter username">
+                    <button id="add-friend-btn">Add Friend</button>
+                </div>
+                <div class="join-invite-section">
+                    <input type="text" id="invite-code" placeholder="Enter invite code">
+                    <button id="join-invite-btn">Join Server</button>
+                </div>
+            </div>
+            <div id="guild-content" class="guild-content">
+                <div class="channel-header">
+                    <span class="channel-name"># general</span>
+                </div>
+                <div class="message-area">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+                <div class="message-input-container">
+                    <textarea class="message-input" placeholder="Message #general" rows="1"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="members-list">
+            <div class="members-category">Online - 0</div>
+            <!-- Members will be dynamically added here -->
+        </div>
+    </div>
+    <div id="create-guild-modal" class="modal">
+        <div class="modal-content">
+            <h2>Create a New Server</h2>
+            <input type="text" id="guild-name" placeholder="Enter server name">
+            <button id="create-guild-submit">Create Server</button>
+            <button id="create-guild-cancel">Cancel</button>
+        </div>
+    </div>
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
+
