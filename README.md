@@ -5,13 +5,13 @@
 This documentation covers the WebSocket API for a FastAPI application. The WebSocket allows real-time communication for various operations including user registration, login, and data manipulation related to users, channels, and guilds.
 
 ## NOTICE
-In every command must be passed `Bearer {token}` except in login and register commands
+In every command, a Bearer token must be passed as a query parameter when connecting to the WebSocket, except for login and register commands.
 
 ## WebSocket Endpoint
 
 ### URL
 ```
-/ws
+/
 ```
 
 ### Method
